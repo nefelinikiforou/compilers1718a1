@@ -1,4 +1,4 @@
-def getchar(words,pos,state):
+def getchar(words,pos,state):	# added state
 	""" returns char at pos of words, or None if out of bounds """
 
 	if pos<0 or pos>=len(words): return None
@@ -62,7 +62,7 @@ def scan(text,transition_table,accept_states):
 	
 # the transition table, as a dictionary
 
-# Αντικαταστήστε με το δικό σας λεξικό μεταβάσεων...
+# Modified
 td = { 'q0':{ 'HOUR_01':'q1', 'HOUR_2':'q2', 'HOUR_39':'q3' },
        'q1':{ 'HOUR_09':'q3', 'SEPARATOR_1':'q4' },
        'q2':{ 'HOUR_03':'q3', 'SEPARATOR_1':'q4' },
@@ -74,7 +74,7 @@ td = { 'q0':{ 'HOUR_01':'q1', 'HOUR_2':'q2', 'HOUR_39':'q3' },
 # the dictionary of accepting states and their
 # corresponding token
 
-# Αντικαταστήστε με το δικό σας λεξικό καταστάσεων αποδοχής...
+# Modified
 ad = { 'q6':'TIME_TOKEN' }
 
 
